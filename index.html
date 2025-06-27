@@ -318,7 +318,7 @@
                 3: Frota
                 4: Agregado
                 </code></pre>
-        </div>
+        </div><br><br>
         <h4>Exemplo de requisição:</h4>
         <div class="codigo">
             <pre><code>
@@ -431,7 +431,7 @@
                     ]
                 }
                 </code></pre>
-        </div>
+        </div><br><br>
         <h4>Exemplo de sucesso:</h4>
         <div class="codigo">
             <pre><code>
@@ -441,13 +441,55 @@
                 }
                 </code></pre>
         </div>
-
+<br><br>
         <h4>Exemplo de falha:</h4>
         <div class="codigo">
             <pre><code>
                 {
                     "pesquisa": false,
                     "message": "Erro: motorista já com pesquisa ativa"
+                }
+                </code></pre>
+        </div>
+<br><br>
+<h2><strong>💻 Acompanhamento de pesquisa ativa:</strong></h2>
+<h4>Exemplo de requisição:</h4>
+        <div class="codigo">
+            <pre><code>
+                {
+	                "pesquisa": "207735"
+                }
+                </code></pre>
+        </div>
+        <br><br>
+<h4>Exemplo de resposta:</h4>
+        <div class="codigo">
+            <pre><code>
+                {
+                    "pesquisa": {
+                        "id": "207735",
+                        "cpf": "378.304.448-03",
+                        "data_pesquisa": "1751054896",
+                        "autorizacao_s3": null,
+                        "status": "Em Análise",
+                        "tipo": "1",
+                        "cavalo_placa": "AAA0A00",
+                        "carreta1_placa": "AAA0A00",
+                        "carreta2_placa": "AAA0A00",
+                        "carreta3_placa": "AAA0A00",
+                        "perfil": "Autônomo"
+                    }
+                }
+
+                </code></pre>
+        </div>
+<br><br>
+<h4>Exemplo de resposta (erro):</h4>
+        <div class="codigo">
+            <pre><code>
+                {
+                    "pesquisa": false,
+                    "message": "Pesquisa inexistente"
                 }
                 </code></pre>
         </div>
