@@ -12,13 +12,13 @@
         line-height: 1;
         margin: 40px;
         background-color: whitesmoke;
-        color: #041e4f;
+        color: #123625;
     }
 
     h1,
     h2,
     h3 {
-        color: #041e4f;
+        color: #123625;
     }
 
     hr {
@@ -26,7 +26,7 @@
     }
 
     .codigo {
-        color: #041e4f;
+        color: #123625;
         ;
         width: fit-content;
         padding-right: 8rem;
@@ -38,18 +38,18 @@
     }
 
     .logovx {
-        width: 50rem;
+        width: 20rem;
         text-align: center;
     }
 </style>
 
 <body>
-    <div style="margin-top: 6rem; margin-bottom: 6rem; display: flex; justify-content: center; align-items: center;">
+    <div style="margin-top: 3rem; margin-bottom: 3rem; display: flex; justify-content: left; align-items: center;">
         <img class="logovx" src="logovx.png" alt="">
     </div>
     <div>
         <h1>Manual de Consulta e Laudo de Motoristas Autônomos - VX Consult</h1>
-        <p>VERSÃO 27/06/2025</p>
+        <p>VERSÃO 07/10/2025</p>
         </p>
     </div>
     <hr>
@@ -323,112 +323,71 @@
         <div class="codigo">
             <pre><code>
                 {
-                        "padrao": "524",
-                        "tipo_motorista": "1",
-                    "motorista": {
-                        "nome_completo": "TESTE CELSO",
-                        "data_nascimento": 441248610,
-                        "cpf": "37830444803",
-                        "rg": "1234250123",
-                        "rg_data_emissao": 1749863010,
-                        "rg_estado": "RS",
-                        "cnh": "02513123254",
-                        "cnh_categoria": "E",
-                        "cnh_vencimento": 1749517410,
-                        "cnh_orgao_emissor": "DETRAN",
-                        "cnh_cidade": "GARIBALDI",
-                        "cnh_estado": "RS",
-                        "cnh_primeira_habilitacao": 1032570210,
-                        "pai": "VILMAR TRENTIN",
-                        "mae": "LAIDIR EITELVEN\nTRENTIN",
-                        "cep": "99240000",
-                        "logradouro": "Distrito d Santa Barbara ",
-                        "numero": "1",
-                        "complemento": "",
-                        "bairro": "Interior ",
-                        "cidade": "São Valentim do Sul",
-                        "estado": "RS",
-                        "telefone_residencial": "Vagner trentin ",
-                        "telefone_residencial_contato": "54999138845",
-                        "telefone_comercial": "",
-                        "telefone_comercial_contato": "",
-                        "telefone_referencia": "",
-                        "telefone_referencia_contato": "(54) 99658-1956"
+                "padrao": "524",
+                "tipo_motorista": "1",
+                "motorista": {
+                    "nome_completo": "TESTE CELSO",
+                    "cpf": "37830444803",
+                    "rg": "1234250123",
+                    "cnh": "02513123254",
+                    "cep": "99240000",
+                    "logradouro": "Distrito d Santa Barbara ",
+                    "numero": "1",
+                    "complemento": "",
+                    "bairro": "Interior ",
+                    "cidade": "São Valentim do Sul",
+                    "estado": "RS",
+                    "telefone_residencial": "Vagner trentin ",
+                    "telefone_residencial_contato": "54999138845",
+                    "telefone_comercial": "",
+                    "telefone_comercial_contato": "",
+                    "telefone_referencia": "",
+                    "telefone_referencia_contato": "(54) 99658-1956"
+                },
+                "cavalo": {
+                    "nome_proprietario": "TRANS ETC LTDA",
+                    "rntc_proprietario": "0310204500",
+                    "cpf_cnpj_proprietario": "31.701.111/0001-02",
+                    "telefone_residencial_proprietario": "Etc ",
+                    "telefone_residencial_contato_proprietario": "(54) 98125-7772",
+                    "telefone_comercial_proprietario": "Abc ",
+                    "telefone_comercial_contato_proprietario": "(54) 98125-7772",
+                    "placa": "AAA0A00"
+                },
+                "carretas": [
+                    {
+                    "nome_proprietario": "TRANS ETC LTDA",
+                    "rntc_proprietario": "0310204500",
+                    "cpf_cnpj_proprietario": "31.701.111/0001-02",
+                    "telefone_residencial_proprietario": "Etc ",
+                    "telefone_residencial_contato_proprietario": "(54) 98125-7772",
+                    "telefone_comercial_proprietario": "Abc ",
+                    "telefone_comercial_contato_proprietario": "(54) 98125-7772",
+                    "placa": "AAA0A00"
+                    }
+                ],
+                "arquivos": [
+                    {
+                    "title": "Comprovante de Endereco",
+                    "path": "URL_PUBLIC"
                     },
-                    "cavalo": {
-                        "nome_proprietario": "TRANS ETC LTDA",
-                        "rntc_proprietario": "0310204500",
-                        "cpf_cnpj_proprietario": "31.701.111/0001-02",
-                        "cep_proprietario": "0100100",
-                        "logradouro_proprietario": "teste",
-                        "numero_proprietario": "11",
-                        "complemento_proprietario": "Lado Esquerdo",
-                        "bairro_proprietario": "Sé",
-                        "cidade_proprietario": "São Paulo",
-                        "estado_proprietario": "SP",
-                        "telefone_residencial_proprietario": "Etc ",
-                        "telefone_residencial_contato_proprietario": "(54) 98125-7772",
-                        "telefone_comercial_proprietario": "Abc ",
-                        "telefone_comercial_contato_proprietario": "(54) 98125-7772",
-                        "placa": "AAA0A00",
-                        "cidade_emplacamento": "GARIBALDI",
-                        "estado_emplacamento": "RS",
-                        "renavam": "0123389236",
-                        "marca": "SCANIA",
-                        "modelo": "R460 A6X2",
-                        "chassi": "9XXX6X200R4039972",
-                        "ano": "2024",
-                        "cor": "AZUL"
+                    {
+                    "title": "CNH",
+                    "path": "URL_PUBLIC"
                     },
-                    "carretas": [
-                        {
-                            "nome_proprietario": "TRANS ETC LTDA",
-                            "rntc_proprietario": "0310204500",
-                            "cpf_cnpj_proprietario": "31.701.111/0001-02",
-                            "cep_proprietario": "0100100",
-                            "logradouro_proprietario": "teste",
-                            "numero_proprietario": "11",
-                            "complemento_proprietario": "Lado Esquerdo",
-                            "bairro_proprietario": "Sé",
-                            "cidade_proprietario": "São Paulo",
-                            "estado_proprietario": "SP",
-                            "telefone_residencial_proprietario": "Etc ",
-                            "telefone_residencial_contato_proprietario": "(54) 98125-7772",
-                            "telefone_comercial_proprietario": "Abc ",
-                            "telefone_comercial_contato_proprietario": "(54) 98125-7772",
-                            "placa": "AAA0A00",
-                            "cidade_emplacamento": "GARIBALDI",
-                            "estado_emplacamento": "RS",
-                            "renavam": "0123389236",
-                            "marca": "SCANIA",
-                            "modelo": "R460 A6X2",
-                            "chassi": "9XXX6X200R4039972",
-                            "ano": "2024",
-                            "cor": "AZUL"
-                        }
-                    ],
-                    "arquivos": [
-                        {
-                            "title": "Comprovante de Endereco",
-                            "path": "URL_PUBLIC"
-                        },
-                        {
-                            "title": "CNH",
-                            "path": "URL_PUBLIC"
-                        },
-                        {
-                            "title": "Veículo",
-                            "path": "URL_PUBLIC"
-                        },
-                        {
-                            "title": "Documento Cavalo",
-                            "path": "URL_PUBLIC"
-                        },
-                        {
-                            "title": "Documento Carreta",
-                            "path": "URL_PUBLIC"
-                        }
-                    ]
+                    {
+                    "title": "Veículo",
+                    "path": "URL_PUBLIC"
+                    },
+                    {
+                    "title": "Documento Cavalo",
+                    "path": "URL_PUBLIC"
+                    },
+                    {
+                    "title": "Documento Carreta",
+                    "path": "URL_PUBLIC"
+                    }
+                ]
                 }
                 </code></pre>
         </div><br><br>
