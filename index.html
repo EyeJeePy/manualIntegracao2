@@ -49,11 +49,29 @@
     </div>
     <div>
         <h1>Manual de Consulta e Laudo de Motoristas Autônomos - VX Consult</h1>
-        <p>VERSÃO 07/10/2025</p>
+        <p>VERSÃO 05/11/2025</p>
         </p>
     </div>
-    <hr>
-
+    <hr> 
+<!-- --- -->
+    <div>
+        <h2>Status de Pesquisa:</h2>
+    <ul>
+        <li>Criada</li>
+        <li>Aberta - Aguardando Operador</li>
+        <li>Em Análise</li>
+        <li>Em Análise - Supervisor</li>
+        <li>Concluído</li>
+        <li>Pesquisa Insuficiente</li>
+        <li>Arquivada/Vencida</li>
+        <li>Aguardando Motorista</li>
+        <li>Pesquisa Pendente</li>
+        <li>Aguardando Contato</li>
+        <li>Aguardando apenas biometria</li>
+    </ul>
+    </div>
+<hr>
+<!-- --- -->
     <div>
         <h2>URL base:</h2>
         <p>https://api-hml.vxconsult.com.br/</p>
@@ -66,7 +84,7 @@
         <h4>Campo (JSON):</h4>
         <p>cpf</p>
         <br>
-        <h4>Exemplo:</h4>
+        <h4>Exemplo 1️⃣:</h4>
         <div class="codigo">
             <pre><code>
                 {
@@ -75,7 +93,7 @@
                 </code></pre>
         </div>
         <br>
-        <h4>Exemplo de resposta:</h4>
+        <h4>Exemplo de resposta 1️⃣:</h4>
         <div class="codigo">
             <pre><code>
                 {
@@ -189,10 +207,55 @@
                     }
                 </code></pre>
         </div>
+
+        <br>
+        <h3>🔽 É possível filtrar as pesquisas com esse CPF incluindo as placas a serem buscadas:</h3>
+        <h4>Exemplo 2️⃣:</h4>
+        <div class="codigo">
+            <pre><code>
+                {
+                    "cpf": "378.304.448-03",
+                    "placas": ["AAA0000"]
+                }
+                </code></pre>
+        </div>
+
+        <br>
+        <h4>Exemplo de resposta 2️⃣:</h4>
+            <div class="codigo">
+            <pre><code>
+                {
+            "data": {
+            "pesquisas": [
+                    {
+                    "id": "189371",
+                    "cpf": "378.304.448-03",
+                    "data_pesquisa": "2025-05-22T15:38:12-03:00",
+                    "autorizacao_s3":
+                    "https://s3.sa-east-1.amazonaws.com/vx-consult-bucket-plataforma/pesquisas/autorizacao-189371.pdf",
+                    "status": "Concluído",
+                    "cavalo_placa": "AAA0000",
+                    "carreta1_placa": "",
+                    "carreta2_placa": "",
+                    "carreta3_placa": "",
+                    "perfil": "Autônomo",
+                    "validade": "2025-08-21T15:38:12-03:00",
+                    "dentro_validade": true,
+                    "temporario": false,
+                    "pagina_renova": "https://plataforma.vxconsult.com.br/cliente/pesquisa-view.php?p=189371"
+                    }
+                    ]
+                },
+                    "message": "Pesquisa encontrada"
+                }
+            </code></pre>
+        </div>
     </div>
+
     <br><br>
     <h2>🖥️ Gerar Nova Consulta e Retornar o Laudo:</h2>
     <p><strong>[POST]</strong> /api/users-permissions/gerarLaudoConsulta</p>
+    
     <br>
     <h4>Corpo (JSON) pesquisa: ID da pesquisa:</h4>
     <div class="codigo">
@@ -209,7 +272,8 @@
                 {
                     "consulta": "181962",
                     "laudo":
-                    "https://s3.sa-east-1.amazonaws.com/vx-consult-bucket-plataforma/consulta/autorizacao-consulta-181962.pdf"
+                    "https://s3.sa-east-1.amazonaws.com/vx-consult-bucket-plataforma/consulta/autorizacao-consulta-181962.pdf",
+                    "validade": "2025-11-15T15:44:12-03:00"
                 }
             </code></pre>
     </div>
