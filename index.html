@@ -34,7 +34,9 @@
     }
 
     .bloco {
-        padding-left: 2rem;
+        margin-left: 2rem;
+        padding-left: 1rem;
+        border-left: 5px solid rgb(156, 162, 38);
     }
 
     .logovx {
@@ -49,7 +51,7 @@
     </div>
     <div>
         <h1>Manual de Consulta e Laudo de Motoristas Autônomos - VX Consult</h1>
-        <p>VERSÃO 05/11/2025</p>
+        <p>VERSÃO 25/11/2025</p>
         </p>
     </div>
     <hr> 
@@ -504,6 +506,7 @@
                         "carreta2_placa": "AAA0A00",
                         "carreta3_placa": "AAA0A00",
                         "perfil": "Autônomo"
+                        "data": "2025-05-22T15:38:12-03:00"
                     }
                 }
 
@@ -516,6 +519,52 @@
                 {
                     "pesquisa": false,
                     "message": "Pesquisa inexistente"
+                }
+                </code></pre>
+        </div>
+
+        <br><br>
+<h2><strong>#️⃣ Upload Base64:</strong></h2>
+        <p><strong>[POST]</strong> /api/users-permissions/uploadBase64</p>
+        <br>
+
+<h4>Exemplo de requisição:</h4>
+        <div class="codigo">
+            <pre><code>
+                {
+	                "fileName": "Teste",
+	                "mimeType": "image/png",
+	                "file": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAM"
+                }
+                </code></pre>
+        </div>
+        <div class="bloco">
+            fileName -> Nome do arquivo <br>
+            mimeType -> mime type <br>
+            file -> dados em base64 sem o mime / base64 (apenas dados depois da vírgula)
+        </div>
+        <br><br>
+<h4>Exemplo de resposta:</h4>
+        <div class="codigo">
+            <pre><code>
+                {
+                    "url": "https://vx-consult-bucket-plataforma.s3.sa-east-1.amazonaws.com/strapi/Teste_226a6c477d.png"
+                }
+
+                </code></pre>
+        </div>
+<br><br>
+<h4>Exemplo de resposta (erro):</h4>
+        <div class="codigo">
+            <pre><code>
+                {
+                    "data": null,
+                    "error": {
+                        "status": 400,
+                        "name": "BadRequestError",
+                        "message": "Por favor enviar o parâmetro mimeType",
+                        "details": {}
+	                }
                 }
                 </code></pre>
         </div>
