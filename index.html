@@ -9,8 +9,8 @@
 <style>
     body {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        line-height: 1.5;
-        margin: 40px;
+        line-height: 1.15;
+        margin: 0rem 5rem;
         background-color: whitesmoke;
         color: #123625;
     }
@@ -27,10 +27,8 @@
 
     .codigo {
         color: #123625;
-        ;
         width: fit-content;
         padding-right: 8rem;
-        border-radius: 10px;
     }
 
     .bloco {
@@ -53,6 +51,12 @@
         padding: 0.5rem;
         }
 
+    .rect {
+      border: 1px solid #123625;
+      padding: 0rem 1rem;
+      width: 20rem;
+      margin: 0.5rem;
+    }
 
 </style>
 
@@ -62,7 +66,7 @@
     </div>
     <div>
         <h1>Manual de Consulta e Laudo de Motoristas Autônomos - VX Consult</h1>
-        <p>VERSÃO 13/03/2026</p>
+        <p>VERSÃO 18/05/2026</p>
         </p>
     </div>
     <hr> 
@@ -396,7 +400,25 @@
                 </code></pre>
         </div>
     </div>
-    <br><br>
+    <br>
+    <div>
+      <h2><strong>🔎 Buscar filial:</strong></h2>
+        <p><strong>[GET]</strong> buscaFilial</p>
+        <div class="codigo">
+        <h4>Exemplo de resposta:</h4>
+            <pre><code>
+[
+  {
+    "id": "1",
+    "nome": "VX Consult"
+  }
+]
+            </code>
+</pre>
+<p><p style="font-style: italic;"> <strong>Observação: </strong>utilizar o ID da filial para criar uma pesquisa associada a ela. Se o número não for informado, ou se a filial não estiver associada ao cliente, a pesquisa será criada em nome da matriz.</p></p>
+    </div>
+    </div>
+    <br>
     <div>
         <h2><strong>🚚 Criar pesquisa (até 3 carretas para cada pesquisa):</strong></h2>
         <p><strong>[POST]</strong> /api/users-permissions/criarPesquisa</p>
@@ -404,26 +426,26 @@
 
         <h4>Enviar:</h4>
         <div class="codigo">
-            <p>Padrão => ID de um padrão válido retornado em</p>
-            <pre><code>
-buscaPadraoPesquisa
-            </code></pre>
+            <p>Padrão => ID de um padrão válido retornado em</p><pre><code>buscaPadraoPesquisa</code></pre>
         </div>
-        <h4>Tipo_motorista:</h4>
+        <div class="rect">
+        <h4>tipo_motorista:</h4>
         <div class="codigo">
             <pre><code>
-                1: Autonomo
+                1: Autônomo
                 2: RH
                 3: Frota
                 4: Agregado
                 </code></pre>
-        </div><br><br>
+        </div><br></div></div>
+        <br>
         <h4>Exemplo de requisição:</h4>
         <div class="codigo">
             <pre><code>
 {
   "padrao": "524",
   "tipo_motorista": "1",
+  "filial": "1",
   "criminal": {
     "motorista": ["São Paulo", "Nacional"],
     "placas": [
