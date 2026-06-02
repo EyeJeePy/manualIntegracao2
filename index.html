@@ -66,7 +66,7 @@
     </div>
     <div>
         <h1>Manual de Consulta e Laudo de Motoristas Autônomos - VX Consult</h1>
-        <p>VERSÃO 18/05/2026</p>
+        <p>VERSÃO 02/06/2026</p>
         </p>
     </div>
     <hr> 
@@ -431,18 +431,30 @@
         <div class="rect">
         <h4>tipo_motorista:</h4>
         <div class="codigo">
-            <pre><code>
+            <pre>
                 1: Autônomo
                 2: RH
                 3: Frota
                 4: Agregado
-                </code></pre>
+                </pre>
         </div><br></div></div>
         <br>
         <h4>Exemplo de requisição:</h4>
+        <div class="rect"><p><strong>✨ Novos campos opcionais: ✨</strong>
+          <div class="codigo"><pre>
+          unidade_negocio
+          unidade_embarque
+          gestor</pre></div></p></div>
         <div class="codigo">
             <pre><code>
 {
+  "unidade_negocio": "AGRO",
+  "unidade_embarque": "2A UNIDADE B",
+  "gestor": {
+    "nome": "TESTE",
+    "contato": "(19) 99999-9999",
+    "email": "teste@teste.com"
+  }
   "padrao": "524",
   "tipo_motorista": "1",
   "filial": "1",
@@ -513,6 +525,7 @@
     "telefone_comercial_proprietario": "Abc ",
     "telefone_comercial_contato_proprietario": "(54) 98125-7772",
     "placa": "AAA0A00",
+    "frotista": true,
     "cidade_emplacamento": "GARIBALDI",
     "estado_emplacamento": "RS",
     "renavam": "0123389236",
@@ -539,6 +552,7 @@
       "telefone_comercial_proprietario": "Abc ",
       "telefone_comercial_contato_proprietario": "(999) 9999-7772",
       "placa": "AAA0A00",
+      "frotista": true,
       "cidade_emplacamento": "GARIBALDI",
       "estado_emplacamento": "RS",
       "renavam": "0123389236",
@@ -564,6 +578,7 @@
       "telefone_comercial_proprietario": "Abc ",
       "telefone_comercial_contato_proprietario": "(999) 9999-7772",
       "placa": "AAA0A00",
+      "frotista": true,
       "cidade_emplacamento": "GARIBALDI",
       "estado_emplacamento": "RS",
       "renavam": "0123389236",
@@ -589,6 +604,7 @@
       "telefone_comercial_proprietario": "Abc ",
       "telefone_comercial_contato_proprietario": "(999) 9999-7772",
       "placa": "AAA0A00",
+      "frotista": true,
       "cidade_emplacamento": "GARIBALDI",
       "estado_emplacamento": "RS",
       "renavam": "0123389236",
